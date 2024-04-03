@@ -13,7 +13,7 @@ type Props = TouchableOpacityProps & {
 
 export function Button({ title, isLoading = false, ...rest }: Props) {
   return (
-    <TouchableOpacity activeOpacity={0.7} disabled={isLoading}>
+    <TouchableOpacity activeOpacity={0.7} disabled={isLoading} {...rest}>
       <View className="w-full h-14 bg-orange-500 items-center justify-center rounded-lg">
         {isLoading ? (
           <ActivityIndicator className="text-green-500" />
